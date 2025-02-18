@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  
-    <title>韩宝，我想你啦💗</title>
+    <title>韩宝，想你啦💗</title>
     <style type="text/css">
         body {
             margin: 0;
@@ -127,7 +127,7 @@
  
 <body>
     <canvas id="pinkboard" width="1920" height="947"></canvas>
-    <div id="name">❤韩煜宝宝，超喜欢！</div>
+    <div id="name">❤煜宝❤</div>
     <canvas id="canvas" width="1920" height="947"></canvas>
  
     <script type="text/javascript">
@@ -202,14 +202,26 @@
             ctx.font = `${180 * this.scale}px "微软雅黑"`;
             ctx.fillStyle = colors[i % 18];
             ctx.fillText(
-                "❤煜宝,爱你哟！❤",
+                "❤持子之手，与子偕老❤",
                 this.x - this.width * 0.5,
                 this.y - this.height * 0.5,
                 this.width,
                 this.height
             );
         };
- 
+  };
+        Heart.prototype.draw = function (i) {
+            ctx.globalAlpha = this.opacity;
+            ctx.font = `${180 * this.scale}px "微软雅黑"`;
+            ctx.fillStyle = colors[i % 18];
+            ctx.fillText(
+                "❤生死相依，不离不弃❤",
+                this.x - this.width * 0.5,
+                this.y - this.height * 0.5,
+                this.width,
+                this.height
+            );
+        };
         function render() {
             ctx.clearRect(0, 0, ww, wh);
             for (var i = 0; i < 100; i++) {
