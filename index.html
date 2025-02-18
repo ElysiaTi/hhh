@@ -209,19 +209,7 @@
                 this.height
             );
         };
-  };
-        Heart.prototype.draw = function (i) {
-            ctx.globalAlpha = this.opacity;
-            ctx.font = `${180 * this.scale}px "微软雅黑"`;
-            ctx.fillStyle = colors[i % 18];
-            ctx.fillText(
-                "❤生死相依，不离不弃❤",
-                this.x - this.width * 0.5,
-                this.y - this.height * 0.5,
-                this.width,
-                this.height
-            );
-        };
+ 
         function render() {
             ctx.clearRect(0, 0, ww, wh);
             for (var i = 0; i < 100; i++) {
